@@ -1,0 +1,2350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AVDV</class>
+ <widget class="QMainWindow" name="AVDV">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1025</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AVDC-3.963</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Img/ico.png</normaloff>../Img/ico.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>0</y>
+      <width>821</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page_avdc">
+     <widget class="QPushButton" name="pushButton_start_cap">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>10</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始</string>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="textBrowser_warning">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>10</y>
+        <width>471</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600; color:#000000;&quot;&gt;反馈BUG，请：开调试模式后截图日志。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>680</y>
+        <width>791</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QProgressBar" name="progressBar_avdc">
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_percent">
+         <property name="text">
+          <string>0%</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QTreeWidget" name="treeWidget_number">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>70</y>
+        <width>201</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <column>
+       <property name="text">
+        <string>番号</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>成功</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>失败</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>450</y>
+        <width>161</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_poster">
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>封面图</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>450</y>
+        <width>331</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
+       </property>
+       <property name="horizontalSpacing">
+        <number>7</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_thumb">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="text">
+          <string>缩略图</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>50</y>
+        <width>791</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>70</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>番号：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_number">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>70</y>
+        <width>201</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>70</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>发行日期：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_release">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>70</y>
+        <width>201</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>270</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>演员：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_actor">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>270</y>
+        <width>491</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_outline">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>320</y>
+        <width>491</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>320</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>简介：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_title">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>220</y>
+        <width>491</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>220</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>标题：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_director">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>120</y>
+        <width>201</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_publish">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>170</y>
+        <width>201</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>120</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>导演：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>170</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>发行：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_studio">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>170</y>
+        <width>201</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_label">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>201</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>制作：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>120</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>系列：</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_tag">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>370</y>
+        <width>491</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>370</y>
+        <width>81</width>
+        <height>39</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>类别：</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_cover">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>420</y>
+        <width>321</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>显示封面(取消勾选后，立即关闭封面显示)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_progress">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>420</y>
+        <width>241</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>0/0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_tool">
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>751</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>视频、字幕移动</string>
+      </property>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>60</y>
+         <width>511</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>‘视频目录’的所有子目录(不包括排除目录)下的视频及同名字幕，
+移动到‘视频目录’下的‘Movie_moved’目录下。</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_move_mp4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>开始移动</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_41">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>30</y>
+         <width>81</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>排除目录：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_escape_dir_move">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>30</y>
+         <width>431</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>751</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>单文件刮削</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>120</y>
+         <width>511</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择单个文件(‘视频目录’下或者子目录下)。
+不指定番号，则默认使用文件名做为番号进行刮削。</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_select_file">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择文件</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_website">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>90</y>
+         <width>431</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>All websites</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>mgstage</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>javbus</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>jav321</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>javdb</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>avsox</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>xcity</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>dmm</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>90</y>
+         <width>72</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>刮削网站:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_appoint_url">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>60</y>
+         <width>431</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>60</y>
+         <width>72</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>刮削网址：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_movie_number">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>30</y>
+         <width>431</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>30</y>
+         <width>72</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>影片番号：</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_start_single_file">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>201</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>刮削</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>751</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Emby-演员头像</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_add_actor_pic">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>添加头像</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_emby_url">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>30</y>
+         <width>431</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>30</y>
+         <width>72</width>
+         <height>15</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Emby地址：</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>74</y>
+         <width>72</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>API密钥：</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_api_key">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>70</y>
+         <width>431</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>110</y>
+         <width>511</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>说明:
+   1、头像请放在程序目录(AVDC目录)下的Actor目录中。
+   2、密钥创建方法：Emby控制台-&gt;高级-&gt;API密钥-&gt;添加(APP名称任意)。</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_show_pic_actor">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>201</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>查看</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="comboBox_pic_actor">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>110</y>
+         <width>201</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>可添加头像的演员</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>没有头像的演员</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>已有头像的演员</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>所有演员</string>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_13">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>540</y>
+        <width>751</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>裁剪封面图</string>
+      </property>
+      <widget class="QPushButton" name="pushButton_select_thumb">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>201</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>选择缩略图</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>20</y>
+         <width>511</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>说明:
+  1、对有些封面图(poster)不满意,比例不对或者分辨率太低,可使用此工具。
+  2、此工具通过判断人脸位置，可以将缩略图(thumb)裁剪为封面图。</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_setting">
+     <widget class="QPushButton" name="pushButton_save_config">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>680</y>
+        <width>361</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>保存</string>
+      </property>
+     </widget>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>781</width>
+        <height>661</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>普通设置</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>761</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>普通设置</string>
+        </property>
+        <widget class="QWidget" name="verticalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>741</width>
+           <height>351</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>模式：</string>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_7">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>591</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <widget class="QRadioButton" name="radioButton_common">
+                <property name="text">
+                 <string>刮削模式</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_sort">
+                <property name="text">
+                 <string>整理模式</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>软链接模式：</string>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_8">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>591</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <widget class="QRadioButton" name="radioButton_soft_on">
+                <property name="text">
+                 <string>开</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_soft_off">
+                <property name="text">
+                 <string>关</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string>调试模式：</string>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_9">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>591</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <item>
+               <widget class="QRadioButton" name="radioButton_debug_on">
+                <property name="text">
+                 <string>开</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_debug_off">
+                <property name="text">
+                 <string>关</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="title">
+             <string>检测更新：</string>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_10">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>591</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QRadioButton" name="radioButton_update_on">
+                <property name="text">
+                 <string>开</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_update_off">
+                <property name="text">
+                 <string>关</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_17">
+            <property name="title">
+             <string>保存日志：</string>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_11">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>591</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <item>
+               <widget class="QRadioButton" name="radioButton_log_on">
+                <property name="text">
+                 <string>开</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_log_off">
+                <property name="text">
+                 <string>关</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_15">
+            <property name="title">
+             <string>失败后移动文件：</string>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_12">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>591</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <item>
+               <widget class="QRadioButton" name="radioButton_fail_move_on">
+                <property name="text">
+                 <string>开</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_fail_move_off">
+                <property name="text">
+                 <string>关</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_23">
+            <property name="title">
+             <string>下载剧照：</string>
+            </property>
+            <widget class="QWidget" name="horizontalLayoutWidget_13">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>10</y>
+               <width>591</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <item>
+               <widget class="QRadioButton" name="radioButton_extrafanart_download_on">
+                <property name="text">
+                 <string>开</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioButton_extrafanart_download_off">
+                <property name="text">
+                 <string>关</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_11">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>470</y>
+          <width>761</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>网站选择</string>
+        </property>
+        <widget class="QComboBox" name="comboBox_website_all">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>591</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <item>
+          <property name="text">
+           <string>All websites</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>mgstage</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>fc2club</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>javbus</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>jav321</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>javdb</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>avsox</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>xcity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>dmm</string>
+          </property>
+         </item>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_24">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>400</y>
+          <width>761</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>下载文件</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_14">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>591</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_16">
+          <item>
+           <widget class="QCheckBox" name="checkBox_download_nfo">
+            <property name="text">
+             <string>nfo</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_download_poster">
+            <property name="text">
+             <string>poster</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_download_fanart">
+            <property name="text">
+             <string>fanart</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_download_thumb">
+            <property name="text">
+             <string>thumb</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>目录设置</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>761</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>命名规则</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>751</width>
+           <height>140</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_6">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_43">
+            <property name="text">
+             <string>   目录命名：             </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_dir_name"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_44">
+            <property name="text">
+             <string>   视频标题(媒体库中):      </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_media_name"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_45">
+            <property name="text">
+             <string>   视频标题(本地文件)：   </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_local_name"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>761</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>目录设置</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>751</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_49">
+            <property name="text">
+             <string>   视频目录：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_movie_path"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_40">
+            <property name="text">
+             <string>   视频类型：              </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="lineEdit_movie_type"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_42">
+            <property name="text">
+             <string>   字幕类型：             </string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_sub_type"/>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_46">
+            <property name="text">
+             <string>   失败输出目录：           </string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEdit_fail"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_47">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="text">
+             <string>   成功输出目录：         </string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="lineEdit_success"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_48">
+            <property name="text">
+             <string>   排除目录：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_escape_dir"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_50">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="text">
+             <string>   剧照目录：         </string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="lineEdit_extrafanart_dir"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>250</y>
+           <width>731</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>说明：
+    1、‘排除目录’、‘成功输出目录’、‘失败输出目录’应为‘视频目录’下的目录。
+    2‘成功输出目录’、‘失败输出目录’不存在，则会在‘视频目录’下创建。、</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>水印设置</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_14">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>761</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>要添加的水印类型</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>601</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QCheckBox" name="checkBox_sub">
+            <property name="text">
+             <string>字幕</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_leak">
+            <property name="text">
+             <string>流出</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkBox_uncensored">
+            <property name="text">
+             <string>无码</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_19">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>240</y>
+          <width>761</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>首个水印位置</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>601</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QRadioButton" name="radioButton_top_left">
+            <property name="text">
+             <string>左上</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_bottom_left">
+            <property name="text">
+             <string>左下</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_top_right">
+            <property name="text">
+             <string>右上</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_bottom_right">
+            <property name="text">
+             <string>右下</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_21">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>761</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>水印大小</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_4">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>30</y>
+           <width>711</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QSlider" name="horizontalSlider_mark_size">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>5</number>
+            </property>
+            <property name="pageStep">
+             <number>1</number>
+            </property>
+            <property name="value">
+             <number>3</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLCDNumber" name="lcdNumber_mark_size">
+            <property name="intValue" stdset="0">
+             <number>3</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_20">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>761</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>封面图添加水印</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_5">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>601</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QRadioButton" name="radioButton_poster_mark_on">
+            <property name="text">
+             <string>开</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_poster_mark_off">
+            <property name="text">
+             <string>关</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>430</y>
+          <width>701</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>说明：
+    1、多个水印时,从首个水印,顺时针添加.
+    2、水印文件可自己替换,分辨率要求长宽 500x300,背景透明，png格式.</string>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_22">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>761</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>缩略图添加水印</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_6">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>601</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QRadioButton" name="radioButton_thumb_mark_on">
+            <property name="text">
+             <string>开</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_thumb_mark_off">
+            <property name="text">
+             <string>关</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>其它设置</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_9">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>761</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>代理设置</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>751</width>
+           <height>119</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_4">
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>   IP+端口号:                </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_proxy"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_26">
+            <property name="text">
+             <string>   超时重试时间：   </string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_27">
+            <property name="text">
+             <string>   重试次数：          </string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QSlider" name="horizontalSlider_timeout">
+              <property name="minimum">
+               <number>3</number>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="pageStep">
+               <number>1</number>
+              </property>
+              <property name="value">
+               <number>7</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_timeout">
+              <property name="intValue" stdset="0">
+               <number>7</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_retry">
+            <item>
+             <widget class="QSlider" name="horizontalSlider_retry">
+              <property name="minimum">
+               <number>2</number>
+              </property>
+              <property name="maximum">
+               <number>5</number>
+              </property>
+              <property name="pageStep">
+               <number>1</number>
+              </property>
+              <property name="value">
+               <number>3</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_retry">
+              <property name="intValue" stdset="0">
+               <number>3</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>   代理：        </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <widget class="QRadioButton" name="radioButton_proxy_http">
+              <property name="text">
+               <string>http</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_proxy_socks5">
+              <property name="text">
+               <string>socks5</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioButton_proxy_nouse">
+              <property name="text">
+               <string>不使用</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_39">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>280</y>
+          <width>761</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>无码封面</string>
+        </property>
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>60</y>
+           <width>681</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>说明：
+    1、官方封面--完整、不清晰；裁剪封面--清晰、不完整。
+    2、官方无图，自动裁剪缩略图。</string>
+         </property>
+        </widget>
+        <widget class="QWidget" name="horizontalLayoutWidget_24">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>20</y>
+           <width>551</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_27">
+          <item>
+           <widget class="QRadioButton" name="radioButton_poster_official">
+            <property name="text">
+             <string>官方</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="radioButton_poster_cut">
+            <property name="text">
+             <string>裁剪</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_40">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>410</y>
+          <width>761</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>无码番号</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>751</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout_9">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>   无码番号前缀：        </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_uncensored_prefix"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QLabel" name="label_17">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>70</y>
+           <width>671</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>说明：只添加 HEYZO、n1111、111111-111之外的前缀。</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_18">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>170</y>
+          <width>761</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>排除设置</string>
+        </property>
+        <widget class="QWidget" name="formLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>751</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_38">
+            <property name="text">
+             <string>   异常字符:            </string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_escape_char"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_39">
+            <property name="text">
+             <string>   多余字符串:         </string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_escape_string"/>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_init_config">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>680</y>
+        <width>71</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>恢复默认</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_about">
+     <widget class="QTextBrowser" name="textBrowser_about">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>761</width>
+        <height>681</height>
+       </rect>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:20pt; font-weight:600;&quot;&gt;AVDC&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:14pt; font-weight:600;&quot;&gt;目录&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_一、功能简介&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;一、功能简介&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_二、项目简介&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;二、项目简介&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_三、常见番号命名参考&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;三、常见番号命名参考&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;#_设置说明&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;四、设置说明&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;_一、功能简介&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;一&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;、功能简介&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  日本电影&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;元数据抓取工具&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;/刮削器，配合本地影片管理软件&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;EMBY,KODI，PLEX&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;等管理本地影片，该软件起到分类与元数据抓取作用，利用元数据信息来分类，供本地影片&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;分类整理&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;使用。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;_二、项目简介&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;二&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;、项目简介&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;Gui made by &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;moyy996&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;，Core made by &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;yoshiko2&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;tg官方电报群:&lt;/span&gt;&lt;a href=&quot;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; text-decoration: underline; color:#0000ff;&quot;&gt; &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://t.me/joinchat/J54y1g3-a7nxJ_-WS4-KFQ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;命令行版项目地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/yoshiko2/AV_Data_Capture&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/yoshiko2/AV_Data_Capture&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;GUI版项目地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/moyy996/AVDC&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt;GUI版EXE下载地址：&lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC/releases&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/moyy996/AVDC/releases&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;_三、常见番号命名参考&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;三&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;、常见番号命名参考&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;不区分大小写、刮削前尽量命名规范！！！！&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;1、标准有码&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;Javdb、Javbus:&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;SSNI-111&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;Dmm：&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;ssni00111&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;2、无码&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;Javdb、Javbus、Avsox:&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;111111-1111、111111_111、HEYZO-1111、n1111&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;3、素人&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;Mgstage:&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;259LUXU-1111&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;Javdb:&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;LUXU-1111&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;Fc2club:&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;FC2-111111、FC2-PPV-111111、FC2PPV-111111&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4、欧美&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;Javdb、Javbus:&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;sexart.11.11.11(系列.年.月.日)&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt; &lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;5、自带字幕影片&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;可以把电影命名为类似&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;ssni-xxx-c.mp4&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;,&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;ssni-xxx-C.mp4&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;，&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;abp-xxx-CD1-C.mp4 &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;的规则。&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;6、多集影片&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;可以把多集电影按照集数后缀命名为类似&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;ssni-xxx-cd1.mp4&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;ssni-xxx-cd2.mp4&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;abp-xxx-CD1-C.mp4&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;的规则，只要含有&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;-CDn/-cdn&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;类似命名规则，即可使用分集功能.**不支持-A -B -1 -2,容易跟字幕的-C混淆**.&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;7、多集、字幕顺序&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;abp-xxx-CD1-C.mp4&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;，&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;分集在前，字幕在后&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;，&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;字幕必须与拓展名靠近&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;，-&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#ff0000; background-color:#ffffff;&quot;&gt;C.mp4&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;8、外挂字幕文件&lt;/span&gt;&lt;/h4&gt;
+&lt;h4 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;字幕文件名&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;必须与&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;影片文件名&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;一致，才可以一起移动到新目录，目前支持&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#ff0000;&quot;&gt;srt ass sub&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;类型的字幕文件。&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;_设置说明&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;四&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;、设置说明&lt;/span&gt;&lt;/h1&gt;
+&lt;h1 style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:22pt; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/h1&gt;
+&lt;h1 style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#24292e; background-color:#ffffff;&quot;&gt;详细的说明： &lt;/span&gt;&lt;a href=&quot;https://github.com/moyy996/AVDC/blob/master/README.md&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;https://github.com/moyy996/AVDC/blob/master/README.md&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:12pt; font-weight:600; text-decoration: underline; color:#0000ff;&quot;&gt;&lt;br /&gt;&lt;/h1&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.1.刮削模式/整理模式&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;1、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;刮削模式&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;：通过番号刮削数据，包括元数据、封面图、缩略图、背景图。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;2、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;整理模式&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;：仅根据女优把电影命名为番号并分类到女优名称的文件夹下。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.2.软链接模式：使用此模式，要以管理员身份运行。&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;刮削完不移动视频，而是在相应目录&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; color:#ff0000;&quot;&gt;创建软链接&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（类似于快捷方式），方便PT下载完既想刮削又想继续上传的仓鼠党同志。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;但是，只能在媒体库展示，不&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; color:#ff0000;&quot;&gt;能在媒体库播放&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.3.调试模式&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;输出番号的元数据，包括封面，导演，演员，简介等。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.4.排除目录&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;在多层目录刮削时&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;排除所填目录&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.5.视频目录&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;要整理的视频的目录，会遍历此目录下的所有视频，&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;包括子目录&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;中。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.6.命名规则&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;1、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;目录命名&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;：存放视频数据的目录名，支持&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;多层目录&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，支持&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;自定义符号&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，例：[actor]/studio/number-【title】。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;2、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;视频标题&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（媒体库中）：&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;nfo&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;中的标题命名。例：number-[title]。可以自定义符号。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;3、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;视频标题&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（本地文件）：本地视频、图片的命名。例：number-[title]。可以自定义符号。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;4、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;可选项&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;为&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;title&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（片名）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;actor&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（演员）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;studio&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（制作商）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;director&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（导演）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;release&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（发售日）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;year&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（发行年份）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;number&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（番号）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;runtime&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（时长）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;series&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（系列）、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;publisher&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（发行商）&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.7.代理设置&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;(1).代理&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;proxy=127.0.0.1:1080&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;proxy行设置&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;本地代理地址和端口&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，支持Shadowxxxx/X,V2XXX本地代理端口，代理软件开&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;全局模式&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt; ,建议使用&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;日本代理&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;如果一直报Connect Failed! Please check your Proxy or Network!错误，请&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;检查端口号&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;是否正确，或者把proxy=后面的地址和端口&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;删除&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，并开启代理软件&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;全局模式&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，或者重启电脑，代理软件，网卡。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;(2).连接超时重试设置&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;timeout=10 &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;10为超时重试时间 单位：秒，可选范围3-10&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;(3).连接重试次数设置&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;retry=3 &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;3即为重试次数，可选范围2-5&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.8.媒体库选择&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;如果是PLEX，请安装插件：&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;XBMCnfoMoviesImporter&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.9.排除指定字符和目录，字符串&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;1、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;排除字符&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;:指定字符删除，例如排除字符： \()，删除&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;创建文件夹时&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;的\()字符&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;2、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;排除目录&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;:指定目录，例如排除目录： failed,JAV_output，多目录刮削时&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;跳过&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;failed,JAV_output&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;3、&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;排除字符串&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;:提取番号时，先删除指定字符串，提高成功率，字符串之间用','隔开。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.10.网站选择&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;可以使用&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;所有网站&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，或者&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;指定网站&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;（&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;avsox,javbus,dmm,javdb,fc2club，mgstage&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;）进行刮削。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;仅使用javdb进行刮削，&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;尽量不要用&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，刮削30左右会被JAVDB&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;封IP&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;一段时间。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.11.保存日志&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;开启后日志保存在&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;程序目录的Log目录下&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;的txt文件内，每次运行会产生一个txt文件，txt文件&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;可以删除&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，不影响程序运行。&lt;/span&gt;&lt;/p&gt;
+&lt;h4 style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600;&quot;&gt;4.12.失败后移动文件&lt;/span&gt;&lt;/h4&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:9.5pt; color:#24292e; background-color:#ffffff;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;如果刮削不到影片信息，&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt; font-weight:600; color:#ff0000;&quot;&gt;可选择不移动视频&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt;，或者自动移动到失败输出目录中。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:10.5pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_log">
+     <widget class="QTextBrowser" name="textBrowser_log_main">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>761</width>
+        <height>681</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_setting" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>221</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="label_ico">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>380</y>
+       <width>201</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>图标</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>201</width>
+       <height>360</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_close">
+          <property name="text">
+           <string>X</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_min">
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_main">
+        <property name="text">
+         <string>主界面</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_log">
+        <property name="text">
+         <string>日志</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_tool">
+        <property name="text">
+         <string>工具</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_setting">
+        <property name="text">
+         <string>设置</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_about">
+        <property name="text">
+         <string>关于</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
