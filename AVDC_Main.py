@@ -1560,8 +1560,9 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
         if cn_sub == 1:
             naming_rule += c_word
         # =======================================================================封面路径
-        thumb_path = path + '/' + naming_rule + '-thumb.jpg'
-        poster_path = path + '/' + naming_rule + '-poster.jpg'
+        apath = 'C:\Users\Administrator\Documents\test'
+        thumb_path = apath + '/' + naming_rule + '-thumb.jpg'
+        poster_path = apath + '/' + naming_rule + '-poster.jpg'
         # =======================================================================无码封面获取方式
         if json_data['imagecut'] == 3 and self.Ui.radioButton_poster_cut.isChecked():
             json_data['imagecut'] = 0
