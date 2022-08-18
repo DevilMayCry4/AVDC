@@ -1560,7 +1560,7 @@ class MyMAinWindow(QMainWindow, Ui_AVDV):
         if cn_sub == 1:
             naming_rule += c_word
         # =======================================================================封面路径
-        apath = 'C:\Users\Administrator\Documents\test'
+        apath = 'C:/Users/Administrator/Documents/test'
         thumb_path = apath + '/' + naming_rule + '-thumb.jpg'
         poster_path = apath + '/' + naming_rule + '-poster.jpg'
         # =======================================================================无码封面获取方式
